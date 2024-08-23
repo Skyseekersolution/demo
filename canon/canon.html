@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .left {
+            flex: 1;
+            margin-right: 20px;
+            background-color: #0096FF;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .right {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .message:hover {
+            background-color: #ddd;
+        }
+
+        .message img {
+            width: 20px;
+        }
+
+        /* chat  */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .chat-container {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+
+        .chat-header {
+            background-color: #0096FF;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .chat-header .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .message.bot {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+
+        .message.user {
+            background-color: #0096FF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 80%;
+            align-self: flex-end;
+        }
+
+        .chat-footer {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #send-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0096FF;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #send-button:hover {
+            background-color: #007acc;
+        }
+
+        .chat-logo {
+            width: 50px;
+            height: 50px;
+            background-color: #0096FF;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-logo:hover {
+            background-color: #007acc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left">
+            <h1>STEPS:</h1>
+  <div class="steps">
+    <li><input type="checkbox" checked> Q1. What is the brand of your printer?</li>
+      <ul> canon</ul>
+    <li><input type="checkbox" > Q2. Choose the closest option to your issue.
+     
+    </div>
+        </div>
+
+        <div class="right">
+            <a href="./connect.html" class="box">
+                <img src="./connect1.png" alt="canon Printer Logo">
+                <h3>Connect Printer to wifi</h3>
+            </a>
+            <a href="./offline.html" class="box">
+                <img src="./offline2.png" alt="Canon Printer Logo">
+                <h3>Printer Offline</h3>
+            </a>
+            <a href="./troubleshoot.html" class="box">
+                <img src="./troubleshoot3.png"
+                    alt="Brother Printer Logo">
+                <h3>Troubleshoot Printer</h3>
+            </a>
+            <a href="./wont.html" class="box">
+                <img src="print4.png" alt="EPSON Printer Logo">
+                <h3>Printer won't Print</h3>
+            </a>
+            <a href="./paperjam.html" class="box">
+                <img src="paperjam5.png"
+                    alt="Xerox Printer Logo">
+                    <h3>Paper jam in Printer</h3>
+                
+            </a>
+            <a href="./new.html" class="box">
+                <img src="setting6.png" alt="Other Printer Logo">
+                <h3>Setting up New Printer</h3>
+                
+            </a>
+        </div>
+    </div>
+
+   <!-- chatbot -->
+   <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+        Chatbot
+        <span class="close-btn" id="close-btn">&times;</span>
+    </div>
+    <div class="chat-body" id="chat-body">
+        <div class="message bot">Hello! How can I help you today?</div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<div class="chat-logo" id="chat-logo">
+    💬
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let chatStarted = false;
+
+        function startChat() {
+            if (!chatStarted) {
+                document.getElementById('chat-body').innerHTML += `<div class="message bot">How can I assist you today?</div>`;
+                chatStarted = true;
+            }
+        }
+
+        function openChat() {
+            document.getElementById('chat-container').style.display = 'flex';
+            startChat();
+        }
+
+        function closeChat() {
+            document.getElementById('chat-container').style.display = 'none';
+        }
+
+        setTimeout(startChat, 5000); // Start chat after 5 seconds
+
+        document.getElementById('send-button').addEventListener('click', () => {
+            const userInput = document.getElementById('user-input').value.trim();
+            if (userInput) {
+                document.getElementById('chat-body').innerHTML += `<div class="message user">${userInput}</div>`;
+                document.getElementById('user-input').value = ''; // Clear the input
+                document.getElementById('chat-body').scrollTop = document.getElementById('chat-body').scrollHeight; // Scroll to the bottom
+            }
+        });
+
+        document.getElementById('user-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                document.getElementById('send-button').click(); // Send message on Enter key press
+            }
+        });
+
+        document.getElementById('chat-logo').addEventListener('click', openChat);
+        document.getElementById('close-btn').addEventListener('click', closeChat);
+    });
+</script>
+
+</body>
+
+</html>
